@@ -27,14 +27,14 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=cmd.from_user.id,
-                    text="**Please Join My Updates Channel to use this Bot!**",
+                    text="**⭕️നിങ്ങൾ ചോദിച്ച സിനിമ ലഭിക്കുവാൻ ആദ്യം ജോയിൻ hear എന്ന ബട്ടൺ ഇൽ CLICK ചെയ്ത് ജോയിൻ ചെയുക എന്നിട്ട് DOWNLOAD എന്ന ബട്ടൺ ഇൽ ക്ലിക്ക് ചെയ്യുക സിനിമ ലഭിക്കും⭕️**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                                InlineKeyboardButton("🎯 JOIN 🎯", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton("♻️ DOWNLOAD ♻️", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
@@ -66,8 +66,8 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122')
+                        InlineKeyboardButton('🎯𝗦𝗘𝗔𝗥𝗖𝗛🎯', switch_inline_query_current_chat=''),
+                        InlineKeyboardButton('💡 𝗕𝗢𝗧 💡', url='https://t.me/moviehubgroupp')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -99,11 +99,11 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Search Here", switch_inline_query_current_chat=''),
-                        InlineKeyboardButton("Other Bots", url="https://t.me/subin_works/122")
+                        InlineKeyboardButton("🎯 𝗦𝗘𝗔𝗥𝗖𝗛 🎯", switch_inline_query_current_chat=''),
+                        InlineKeyboardButton("🕊️ 𝗖𝗛𝗔𝗡𝗘𝗟 🕊️", url="https://t.me/moviehubcinema")
                     ],
                     [
-                        InlineKeyboardButton("About", callback_data="about")
+                        InlineKeyboardButton("💘 𝗕𝗢𝗧 𝗚𝗥𝗢𝗨𝗣 💘", url="https://t.me/moviehubgroupp")
                     ]
                 ]
             )
