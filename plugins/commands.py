@@ -7,6 +7,11 @@ from utils import Media, get_file_details, get_size
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
+#ahahaha
+START_IMG = """
+https://telegra.ph/file/c916aecbae34dc9be5172.jpg 
+"""
+
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
     usr_cmdall1 = cmd.text
@@ -92,10 +97,7 @@ async def start(bot, cmd):
             )
         )
     else:
-        await cmd.reply_text(
-            START_MSG,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
+        await cmd.reply_photo(photo=START_IMG, caption=START_MSG.format(cmd.from_user.mention),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
