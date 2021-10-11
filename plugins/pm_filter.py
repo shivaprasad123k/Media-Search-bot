@@ -1,5 +1,5 @@
 #Kanged From @TroJanZheX
-from info import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS
+from info import AUTH_CHANNEL, AUTH_USERS, CUSTOM_FILE_CAPTION, API_KEY, AUTH_GROUPS, RESULT_MSG
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 import re
@@ -81,10 +81,9 @@ async def filter(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
-
+                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons
             return
 
         data = BUTTONS[keyword]
@@ -100,9 +99,9 @@ async def filter(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons
 
 @Client.on_message(filters.text & filters.group & filters.incoming & filters.chat(AUTH_GROUPS) if AUTH_GROUPS else filters.text & filters.group & filters.incoming)
 async def group(client, message):
@@ -145,9 +144,9 @@ async def group(client, message):
             if API_KEY:
                 poster=await get_poster(search)
             if poster:
-                await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
             else:
-                await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+                await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons
             return
 
         data = BUTTONS[keyword]
@@ -163,9 +162,9 @@ async def group(client, message):
         if API_KEY:
             poster=await get_poster(search)
         if poster:
-            await message.reply_photo(photo=poster, caption=f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_photo(photo=poster, caption=f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons))
         else:
-            await message.reply_text(f"<b>Here is What I Found In My Database For Your Query {search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </b>", reply_markup=InlineKeyboardMarkup(buttons))
+            await message.reply_text(f"<b>🍿 ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search} ‌‌‌‌‎ ­  ­  ­  ­  ­  </code>{RESULT_MSG} </b>", reply_markup=InlineKeyboardMarkup(buttons
 
     
 def get_size(size):
