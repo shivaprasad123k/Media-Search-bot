@@ -2,15 +2,11 @@ import os
 import logging
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION
+from info import START_MSG, CHANNELS, ADMINS, AUTH_CHANNEL, CUSTOM_FILE_CAPTION, START_IMG
 from utils import Media, get_file_details, get_size
 from pyrogram.errors import UserNotParticipant
 logger = logging.getLogger(__name__)
 
-#ahahaha
-START_IMG = """
-https://telegra.ph/file/c916aecbae34dc9be5172.jpg 
-"""
 
 @Client.on_message(filters.command("start"))
 async def start(bot, cmd):
